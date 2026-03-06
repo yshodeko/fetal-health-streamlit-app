@@ -9,7 +9,7 @@ st.caption("APP VERSION: Immortal")
 
 @st.cache_resource
 def load_bundle():
-    return joblib.load("fetal_health_rf_bundle.pkl")
+    return joblib.load("fetal_health_rf_bundle_v2.pkl")
 
 bundle = load_bundle()
 model = bundle["model"]
@@ -134,3 +134,4 @@ if st.button("Predict"):
     st.success(
         f"Final Prediction = Class {pred_class} → {label_map.get(pred_class, pred_class)}"
     )
+
